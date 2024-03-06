@@ -1,0 +1,34 @@
+{
+    "criteria": {
+        "gem_interact":{
+            "trigger": "item_used_on_block",
+            "conditions": {
+                "location": [
+                    {
+                        "condition": "block_state_property",
+                        "block": "note_block",
+                        "properties": {
+                            "instrument": "dragon"
+                        }
+                    }
+                ],
+                "player": [
+                    {
+                        "condition": "entity_properties",
+                        "entity": "this",
+                        "predicate": {
+                            "equipment": {
+                                "mainhand": {
+                                    "nbt": "{ng_gem:1}"
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "ng:gem_interact"
+    }
+}

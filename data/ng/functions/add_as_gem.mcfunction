@@ -3,6 +3,10 @@ data remove storage ng:tmp mainhand
 data modify storage ng:tmp mainhand set from entity @s SelectedItem
 execute if data storage ng:tmp mainhand.tag.ng_gem run return -1
 
+#define score_holder #gem_origin_lore
+scoreboard players reset #gem_origin_lore ng
+execute store result score #gem_origin_lore ng if data storage ng:tmp mainhand.tag.display.Lore[]
+
 execute if data storage ng:tmp mainhand.tag.Enchantments[0] run data modify storage ng:tmp mainhand.tag.display.Lore append value '""'
 execute if data storage ng:tmp mainhand.tag.Enchantments[0] run function ng:add_gem_ench
 
@@ -20,7 +24,8 @@ data modify storage ng:tmp mainhand.tag.display.Lore append value '[{"text": "�
 data modify storage ng:tmp mainhand.tag.display.Lore append value '[{"text": "可以将祝福镶嵌在副手物品","color": "gray","italic": false}]'
 data modify storage ng:tmp mainhand.tag.display.Lore append value '[{"text": "镶嵌无法撤销，请谨慎操作","color": "#ffcccc","italic": false}]'
 data modify storage ng:tmp mainhand.tag.ng_gem set value 1
-data remove storage ng:tmp mainhand.tag.display.Lore[0]
+execute if score #gem_origin_lore ng matches 0 run data remove storage ng:tmp mainhand.tag.display.Lore[0]
 data modify storage ng:tmp mainhand.tag.HideFlags set value 255
 
 function ng:giveitem with storage ng:tmp mainhand
+tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "gold"},{"text": "] ","color": "white"},{"text": "已创建 — ","color": "white"},{"storage": "ng:tmp","nbt":"mainhand.tag.display.Name","interpret": true}]

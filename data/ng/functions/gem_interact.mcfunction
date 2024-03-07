@@ -26,7 +26,7 @@ data modify storage ng:tmp offhand.tag.Unbreakable merge from storage ng:tmp mai
 data modify storage ng:tmp offhand.tag.display.Lore append value '""'
 data modify storage ng:tmp offhand.tag.display.Lore append value '[{"text": "已镶嵌:","color": "#aaffcc","italic": true}]'
 data modify storage ng:tmp offhand.tag.display.Lore append from storage ng:tmp mainhand.tag.display.Name
-tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "green"},{"text": "] ","color": "white"},{"text": "成功镶嵌祝福 — ","color": "white"},{"storage": "ng:tmp","nbt":"mainhand.tag.display.Name","interpret": true}]
+tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "green"},{"text": "] ","color": "white"},{"text": "成功镶嵌 — ","color": "white"},{"storage": "ng:tmp","nbt":"mainhand.tag.display.Name","interpret": true}]
 
 data modify storage ng:tmp offhand.tag.ng_item set value 1
 

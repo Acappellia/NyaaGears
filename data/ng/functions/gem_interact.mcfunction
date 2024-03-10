@@ -32,5 +32,5 @@ data modify storage ng:tmp offhand.tag.ng_item set value 1
 
 function ng:giveitem with storage ng:tmp offhand
 
-playsound entity.player.levelup player @s ~ ~ ~ 1 1
-particle totem_of_undying ~ ~1 ~ 0 0 0 0.1 20
+playsound block.beacon.power_select player @s ~ ~ ~ 1 1
+particle enchant ~ ~1 ~ 1 1 1 0.05 100

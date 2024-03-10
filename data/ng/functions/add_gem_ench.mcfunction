@@ -1,6 +1,9 @@
 data modify storage ng:tmp mainhand.tag.StoredEnchantments append from storage ng:tmp mainhand.tag.Enchantments[0]
 
-data modify storage ng:tmp mainhand.tag.Enchantments[0].id set string storage ng:tmp mainhand.tag.Enchantments[0].id 10
+scoreboard players reset #checkstring ng
+data modify storage ng:tmp checkstring set string storage ng:tmp mainhand.tag.Enchantments[0].id 0 10
+execute store success score #checkstring ng run data modify storage ng:tmp checkstring set value "minecraft:"
+execute unless score #checkstring ng matches 1 run data modify storage ng:tmp mainhand.tag.Enchantments[0].id set string storage ng:tmp mainhand.tag.Enchantments[0].id 10
 function ng:addlore_ench with storage ng:tmp mainhand.tag.Enchantments[0]
 
 data remove storage ng:tmp mainhand.tag.Enchantments[0]

@@ -1,0 +1,1 @@
+$execute store result storage ng:tmp mainhand.tag.Enchantments[0].lvl short 1 run random value $(enchlvl_min)..$(enchlvl)

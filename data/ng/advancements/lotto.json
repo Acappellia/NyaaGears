@@ -1,0 +1,19 @@
+{
+    "criteria": {
+        "ticket_input":{
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "interaction",
+                    "nbt": "{Tags:[\"ng_lotto\"]}"
+                },
+                "item": {
+                    "nbt": "{ng_ticket:1}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "ng:ticket_lotto"
+    }
+}

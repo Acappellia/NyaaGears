@@ -12,6 +12,11 @@ execute if score #att_negative ng matches 1 run scoreboard players operation #at
 execute if score #att_operation ng matches 0 store result storage ng:tmp mainhand.tag.AttributeModifiers[0].Amount double 0.01 run scoreboard players get #att_amount ng
 execute if score #att_operation ng matches 1..2 store result storage ng:tmp mainhand.tag.AttributeModifiers[0].Amount double 1 run scoreboard players get #att_amount ng
 
+#define score_holder #checkstring
+scoreboard players reset #checkstring ng
+data modify storage ng:tmp checkstring set string storage ng:tmp mainhand.tag.AttributeModifiers[0].AttributeName 0 10
+execute store success score #checkstring ng run data modify storage ng:tmp checkstring set value "minecraft:"
+execute unless score #checkstring ng matches 1 run data modify storage ng:tmp mainhand.tag.AttributeModifiers[0].AttributeName set string storage ng:tmp mainhand.tag.AttributeModifiers[0].AttributeName 10
 function ng:addlore_att with storage ng:tmp mainhand.tag.AttributeModifiers[0]
 
 data remove storage ng:tmp mainhand.tag.AttributeModifiers[0]

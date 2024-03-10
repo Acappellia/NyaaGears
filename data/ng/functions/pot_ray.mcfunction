@@ -1,0 +1,2 @@
+execute if block ~ ~ ~ decorated_pot run data modify block ~ ~ ~ item set from storage ng:tmp lotto_result
+execute unless block ~ ~ ~ decorated_pot if entity @s[distance=..5] positioned ^ ^ ^0.5 run function ng:pot_ray

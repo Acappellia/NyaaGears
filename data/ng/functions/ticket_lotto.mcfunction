@@ -1,12 +1,15 @@
-data remove storage ng:tmp mainhand
+advancement revoke @s only ng:lotto
 
-data modify storage ng:tmp mainhand set from entity @s SelectedItem
-execute if data storage ng:tmp mainhand.tag.ng_gem run return -1
+item modify entity @s weapon.mainhand ng:remove_1
 
-data modify storage ng:tmp mainhand.tag.Lore_origin set from storage ng:tmp mainhand.tag.display.Lore
+#define score_holder #lotto_count
+execute store result score #lotto_count ng if data storage ng:lotto_gem items[]
+execute store result storage ng:tmp lotto.items int 1 run scoreboard players remove #lotto_count ng 1
+function ng:lotto_itempool with storage ng:tmp lotto
+function ng:lotto_copyitem with storage ng:tmp lotto
 
 execute if data storage ng:tmp mainhand.tag.Enchantments[0] run data modify storage ng:tmp mainhand.tag.display.Lore append value '""'
-execute if data storage ng:tmp mainhand.tag.Enchantments[0] run function ng:add_gem_ench
+execute if data storage ng:tmp mainhand.tag.Enchantments[0] run function ng:add_gem_ench_random
 
 execute if data storage ng:tmp mainhand.tag.AttributeModifiers[0] run data modify storage ng:tmp mainhand.tag.display.Lore append value '""'
 execute if data storage ng:tmp mainhand.tag.AttributeModifiers[0] run function ng:add_gem_att
@@ -22,8 +25,15 @@ data modify storage ng:tmp mainhand.tag.display.Lore append value '[{"text": "�
 data modify storage ng:tmp mainhand.tag.display.Lore append value '[{"text": "可以将祝福镶嵌在副手物品","color": "gray","italic": false}]'
 data modify storage ng:tmp mainhand.tag.display.Lore append value '[{"text": "镶嵌无法撤销，请谨慎操作","color": "#ffcccc","italic": false}]'
 data modify storage ng:tmp mainhand.tag.ng_gem set value 1
-execute unless data storage ng:tmp mainhand.tag.Lore_origin run data remove storage ng:tmp mainhand.tag.display.Lore[0]
+execute unless data storage ng:tmp mainhand.tag.display.Lore_origin run data remove storage ng:tmp mainhand.tag.display.Lore[0]
 data modify storage ng:tmp mainhand.tag.HideFlags set value 255
 
 function ng:giveitem with storage ng:tmp mainhand
-tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "gold"},{"text": "] ","color": "white"},{"text": "已创建 — ","color": "white"},{"storage": "ng:tmp","nbt":"mainhand.tag.display.Name","interpret": true}]
+
+#define score_holder #parrot_calls
+execute store result score #parrot_calls ng run random value 0..3
+tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "green"},{"text": "] ","color": "white"},{"text": "获得物品 — ","color": "white"},{"storage": "ng:tmp","nbt":"mainhand.tag.display.Name","interpret": true}]
+execute unless score #parrot_calls ng matches 0 run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "green"},{"text": "] ","color": "white"},{"text": "すごい! すごい! ","color": "white"}]
+execute if score #parrot_calls ng matches 0 run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "green"},{"text": "] ","color": "white"},{"text": "アンビリーバボー!","color": "white"}]
+playsound entity.parrot.ambient player @s ~ ~ ~ 1 1
+particle totem_of_undying ~ ~1 ~ 0 0 0 0.5 20

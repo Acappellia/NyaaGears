@@ -1,0 +1,21 @@
+{
+    "criteria": {
+        "kill_zombie":{
+            "trigger": "player_killed_entity",
+            "conditions": {
+                "entity": {
+                    "type": "#ng:hostile"
+                },
+                "player": [
+                    {
+                        "condition": "random_chance",
+                        "chance": 0.05
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "ng:kill_mob"
+    }
+}

@@ -4,3 +4,8 @@
 scoreboard objectives add ng dummy
 scoreboard players set #-1 ng -1
 scoreboard players set #2 ng 2
+
+scoreboard objectives add ng_killcd dummy
+scoreboard objectives add ng_killcd_time dummy
+
+function ng:slowtick

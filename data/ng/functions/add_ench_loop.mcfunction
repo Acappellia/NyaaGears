@@ -6,6 +6,9 @@ execute store result score #exsist_ench_count ng if data storage ng:tmp offhand.
 #define score_holder #ench_findorigin
 scoreboard players reset #ench_findorigin ng
 execute store result score #ench_findorigin ng run function ng:add_ench_searchorigin with storage ng:tmp ench
+
+tellraw @a ["index",{"score":{"name": "#ench_index","objective": "ng"}},",origin",{"score":{"name": "#ench_findorigin","objective": "ng"}}]
+
 execute if score #ench_findorigin ng matches 1 run function ng:add_ench_update with storage ng:tmp ench
 execute if score #ench_findorigin ng matches -1 run data modify storage ng:tmp offhand.tag.Enchantments append from storage ng:tmp mainhand.tag.StoredEnchantments[0]
 

@@ -2,6 +2,11 @@ advancement revoke @s only ng:lotto
 
 item modify entity @s weapon.mainhand ng:remove_1
 
+#define score_holder #lotto_type
+execute store result score #lotto_type ng run random value 0..2
+execute if score #lotto_type ng matches 1..2 run function ng:ticket_lotto_upg
+execute if score #lotto_type ng matches 1..2 run return 1
+
 #define score_holder #lotto_count
 execute store result score #lotto_count ng if data storage ng:lotto_gem items[]
 execute store result storage ng:tmp lotto.items int 1 run scoreboard players remove #lotto_count ng 1
@@ -30,10 +35,8 @@ data modify storage ng:tmp mainhand.tag.HideFlags set value 255
 
 function ng:giveitem with storage ng:tmp mainhand
 
-#define score_holder #parrot_calls
-execute store result score #parrot_calls ng run random value 0..3
+
 tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "green"},{"text": "] ","color": "white"},{"text": "获得物品 — ","color": "white"},{"storage": "ng:tmp","nbt":"mainhand.tag.display.Name","interpret": true}]
-execute unless score #parrot_calls ng matches 0 run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "green"},{"text": "] ","color": "white"},{"text": "すごい! すごい! ","color": "white"}]
-execute if score #parrot_calls ng matches 0 run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "green"},{"text": "] ","color": "white"},{"text": "アンビリーバボー!","color": "white"}]
+tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "green"},{"text": "] ","color": "white"},{"text": "アンビリーバボー!","color": "white"}]
 playsound entity.parrot.ambient player @s ~ ~ ~ 1 1
 particle totem_of_undying ~ ~1 ~ 0 0 0 0.5 20

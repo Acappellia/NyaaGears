@@ -19,7 +19,7 @@ item modify entity @s weapon.mainhand ng:remove_1
 item modify entity @s weapon.offhand ng:remove_1
 
 execute if data storage ng:tmp mainhand.tag.StoredAttributeModifiers[0] run function ng:add_attribute_loop
-execute if data storage ng:tmp mainhand.tag.StoredEnchantments[0] run function ng:add_ench_loop
+execute if data storage ng:tmp mainhand.tag.Enchantments_store[0] run function ng:add_ench_loop
 
 data modify storage ng:tmp offhand.tag.Unbreakable set from storage ng:tmp mainhand.tag.Unbreakable
 

@@ -1,5 +1,6 @@
 #define storage ng:tmp
 #define storage ng:lotto_gem
+#define storage ng:lotto_gem_upg
 
 scoreboard objectives add ng dummy
 scoreboard players set #-1 ng -1

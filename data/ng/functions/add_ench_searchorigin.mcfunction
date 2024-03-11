@@ -2,7 +2,7 @@
 
 data remove storage ng:tmp search_ench_id
 $data modify storage ng:tmp search_ench_id set from storage ng:tmp offhand.tag.Enchantments[$(index)].id
-execute store success score #ench_searchresult ng run data modify storage ng:tmp search_ench_id set from storage ng:tmp mainhand.tag.StoredEnchantments[0].id
+execute store success score #ench_searchresult ng run data modify storage ng:tmp search_ench_id set from storage ng:tmp mainhand.tag.Enchantments_store[0].id
 
 execute unless score #ench_searchresult ng matches 1 run return 1
 

@@ -1,4 +1,4 @@
-data modify storage ng:tmp mainhand.tag.StoredEnchantments append from storage ng:tmp mainhand.tag.Enchantments[0]
+data modify storage ng:tmp mainhand.tag.Enchantments_store append from storage ng:tmp mainhand.tag.Enchantments[0]
 
 scoreboard players reset #checkstring ng
 data modify storage ng:tmp checkstring set string storage ng:tmp mainhand.tag.Enchantments[0].id 0 10

@@ -6,7 +6,7 @@ execute if score #lotto_enchlvl_min ng matches ..0 run scoreboard players set #l
 execute store result storage ng:tmp lotto.enchlvl_min int 1 run scoreboard players get #lotto_enchlvl_min ng
 execute if score #lotto_enchlvl ng matches 2.. run function ng:lotto_enchpool with storage ng:tmp lotto
 
-data modify storage ng:tmp mainhand.tag.StoredEnchantments append from storage ng:tmp mainhand.tag.Enchantments[0]
+data modify storage ng:tmp mainhand.tag.Enchantments_store append from storage ng:tmp mainhand.tag.Enchantments[0]
 
 scoreboard players reset #checkstring ng
 data modify storage ng:tmp checkstring set string storage ng:tmp mainhand.tag.Enchantments[0].id 0 10

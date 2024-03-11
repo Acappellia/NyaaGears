@@ -24,7 +24,7 @@ execute store result score #exsist_ench_count ng if data storage ng:tmp offhand.
 execute if data storage ng:tmp mainhand.tag.StoredAttributeModifiers[0] run function ng:add_attribute_loop
 execute if data storage ng:tmp mainhand.tag.StoredEnchantments[0] run function ng:add_ench_loop
 
-data modify storage ng:tmp offhand.tag.Unbreakable merge from storage ng:tmp mainhand.tag.Unbreakable
+data modify storage ng:tmp offhand.tag.Unbreakable set from storage ng:tmp mainhand.tag.Unbreakable
 
 data modify storage ng:tmp offhand.tag.display.Lore append value '""'
 data modify storage ng:tmp offhand.tag.display.Lore append value '[{"text": "已镶嵌:","color": "#aaffcc","italic": true}]'

@@ -18,6 +18,9 @@ execute if data storage ng:tmp offhand.tag.ng_item run return -1
 item modify entity @s weapon.mainhand ng:remove_1
 item modify entity @s weapon.offhand ng:remove_1
 
+#define score_holder #exsist_ench_count
+execute store result score #exsist_ench_count ng if data storage ng:tmp offhand.tag.Enchantments[0]
+
 execute if data storage ng:tmp mainhand.tag.StoredAttributeModifiers[0] run function ng:add_attribute_loop
 execute if data storage ng:tmp mainhand.tag.StoredEnchantments[0] run function ng:add_ench_loop
 

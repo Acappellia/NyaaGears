@@ -5,13 +5,7 @@
             "conditions": {
                 "entity": {
                     "type": "#ng:hostile"
-                },
-                "player": [
-                    {
-                        "condition": "random_chance",
-                        "chance": 0.05
-                    }
-                ]
+                }
             }
         }
     },

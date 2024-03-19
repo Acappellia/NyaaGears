@@ -3,7 +3,7 @@ advancement revoke @s only ng:lotto
 item modify entity @s weapon.mainhand ng:remove_1
 
 #define score_holder #lotto_type
-execute store result score #lotto_type ng run random value 0..2
+execute store result score #lotto_type ng run random value 0..2 minecraft:entities/bat
 execute if score #lotto_type ng matches 1..2 run function ng:ticket_lotto_upg
 execute if score #lotto_type ng matches 1..2 run return 1
 

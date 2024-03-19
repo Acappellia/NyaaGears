@@ -11,4 +11,4 @@ tag @s remove ng_cd_full
 scoreboard players remove @s ng_killcd 20
 function ng:giveitem with storage ng:lotto_gem material
 
-playsound block.enchantment_table.use player @s ~ ~ ~ 1 1
+playsound block.enchantment_table.use player @a ~ ~ ~ 1 1

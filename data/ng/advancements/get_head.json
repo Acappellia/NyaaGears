@@ -1,0 +1,18 @@
+{
+    "criteria": {
+        "eat_apple":{
+            "trigger": "consume_item",
+            "conditions": {
+                "item": {
+                    "items": [
+                        "apple"
+                    ],
+                    "nbt": "{ng_head:1}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "ng:get_skull"
+    }
+}

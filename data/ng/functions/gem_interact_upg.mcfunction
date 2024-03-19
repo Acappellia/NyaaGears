@@ -39,5 +39,5 @@ execute store result storage ng:tmp offhand.tag.ng_item int 1 run scoreboard pla
 
 function ng:giveitem with storage ng:tmp offhand
 
-playsound block.beacon.power_select player @s ~ ~ ~ 2 1
+playsound block.beacon.power_select player @a ~ ~ ~ 2 1
 particle enchant ~ ~1 ~ 1 1 1 0.05 100

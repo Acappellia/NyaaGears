@@ -8,5 +8,5 @@ function ng:giveitem with storage ng:tmp mainhand
 tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "green"},{"text": "] ","color": "white"},{"text": "获得物品 — ","color": "white"},{"storage": "ng:tmp","nbt":"mainhand.tag.display.Name","interpret": true}]
 tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "green"},{"text": "] ","color": "white"},{"text": "すごい! すごい! ","color": "white"}]
 
-playsound entity.parrot.ambient player @s ~ ~ ~ 1 1
+playsound entity.parrot.ambient player @a ~ ~ ~ 1 1
 particle totem_of_undying ~ ~1 ~ 0 0 0 0.5 20

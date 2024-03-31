@@ -42,7 +42,7 @@
             }
           ],
           "name": "minecraft:yellow_shulker_box",
-          "weight": 30
+          "weight": 1
         },
         {
           "type": "minecraft:item",
@@ -62,7 +62,7 @@
             }
           ],
           "name": "minecraft:barrel",
-          "weight": 30
+          "weight": 1
         },
         {
           "type": "minecraft:item",
@@ -82,7 +82,7 @@
             }
           ],
           "name": "minecraft:decorated_pot",
-          "weight": 30
+          "weight": 1
         },
         {
           "type": "minecraft:item",
@@ -102,7 +102,7 @@
             }
           ],
           "name": "minecraft:suspicious_sand",
-          "weight": 30
+          "weight": 1
         },
         {
           "type": "minecraft:item",
@@ -122,7 +122,7 @@
             }
           ],
           "name": "minecraft:suspicious_gravel",
-          "weight": 30
+          "weight": 1
         },
         {
           "type": "minecraft:item",
@@ -142,7 +142,7 @@
             }
           ],
           "name": "minecraft:dropper",
-          "weight": 30
+          "weight": 1
         },
         {
           "type": "minecraft:item",
@@ -162,7 +162,7 @@
             }
           ],
           "name": "minecraft:dispenser",
-          "weight": 30
+          "weight": 1
         }
       ],
       "rolls": {

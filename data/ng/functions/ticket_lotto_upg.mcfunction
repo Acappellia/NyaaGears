@@ -5,6 +5,8 @@ function ng:lotto_copyitem_upg with storage ng:tmp lotto
 
 function ng:giveitem with storage ng:tmp mainhand
 
+function ng:lotto_record_log
+
 tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "green"},{"text": "] ","color": "white"},{"text": "获得物品 — ","color": "white"},{"storage": "ng:tmp","nbt":"mainhand.tag.display.Name","interpret": true}]
 tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "green"},{"text": "] ","color": "white"},{"text": "すごい! すごい! ","color": "white"}]
 

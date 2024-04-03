@@ -1,0 +1,78 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "functions": [
+                {
+                  "function": "minecraft:copy_name",
+                  "source": "block_entity"
+                },
+                {
+                  "function": "minecraft:copy_nbt",
+                  "source": "block_entity",
+                  "ops": [
+                    {
+                      "source": "\"Paper.LootableData\"",
+                      "target": "BlockEntityTag.\"Paper.LootableData\"",
+                      "op": "replace"
+                    },
+                    {
+                      "source": "LootTable",
+                      "target": "BlockEntityTag.LootTable",
+                      "op": "replace"
+                    },
+                    {
+                      "source": "LootTableSeed",
+                      "target": "BlockEntityTag.LootTableSeed",
+                      "op": "replace"
+                    }
+                  ]
+                }
+              ],
+              "name": "minecraft:chest"
+            },
+            {
+              "type": "minecraft:item",
+              "functions": [
+                {
+                  "function": "minecraft:copy_name",
+                  "source": "block_entity"
+                }
+              ],
+              "conditions": [
+                {
+                  "condition": "minecraft:survives_explosion"
+                }
+              ],
+              "name": "minecraft:chest"
+            }
+          ]
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "minecraft:blocks/chest"
+}

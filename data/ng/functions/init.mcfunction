@@ -10,6 +10,8 @@ scoreboard players set #2 ng 2
 scoreboard objectives add ng_killcd dummy
 scoreboard objectives add ng_killcd_time dummy
 
+scoreboard objectives add ng_test dummy
+
 forceload add 0 0 0 0 
 
 function ng:slowtick

@@ -1,14 +1,16 @@
 #define score_holder #lotto_enchlvl
 #define score_holder #lotto_enchlvl_min
-execute store result score #lotto_enchlvl_min ng store result score #lotto_enchlvl ng store result storage ng:tmp lotto.enchlvl int 1 run data get storage ng:tmp mainhand.tag.Enchantments[0].lvl
+execute store result score $min random store result score $max random run data get storage ng:tmp mainhand.tag.Enchantments[0].lvl
+scoreboard players operation $min random /= #2 ng
+execute if score $min random matches ..0 run scoreboard players set $min random 1
+function ng:random_uniform
+execute store result storage ng:tmp mainhand.tag.Enchantments[0].lvl short 1 run scoreboard players get $out random
 
-#test line
-data modify storage ng:tmp mainhand.tag.Enchantments[0].lvl set value 64s
-
-scoreboard players operation #lotto_enchlvl_min ng /= #2 ng
-execute if score #lotto_enchlvl_min ng matches ..0 run scoreboard players set #lotto_enchlvl_min ng 1
-execute store result storage ng:tmp lotto.enchlvl_min int 1 run scoreboard players get #lotto_enchlvl_min ng
-execute if score #lotto_enchlvl ng matches 2.. run function ng:lotto_enchpool with storage ng:tmp lotto
+#execute store result score #lotto_enchlvl_min ng store result score #lotto_enchlvl ng store result storage ng:tmp lotto.enchlvl int 1 run data get storage ng:tmp mainhand.tag.Enchantments[0].lvl
+#scoreboard players operation #lotto_enchlvl_min ng /= #2 ng
+#execute if score #lotto_enchlvl_min ng matches ..0 run scoreboard players set #lotto_enchlvl_min ng 1
+#execute store result storage ng:tmp lotto.enchlvl_min int 1 run scoreboard players get #lotto_enchlvl_min ng
+#execute if score #lotto_enchlvl ng matches 2.. run function ng:lotto_enchpool with storage ng:tmp lotto
 
 data modify storage ng:tmp mainhand.tag.Enchantments_store append from storage ng:tmp mainhand.tag.Enchantments[0]
 

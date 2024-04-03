@@ -8,9 +8,16 @@ execute if score #lotto_type ng matches 1..2 run function ng:ticket_lotto_upg
 execute if score #lotto_type ng matches 1..2 run return 1
 
 #define score_holder #lotto_count
-execute store result score #lotto_count ng if data storage ng:lotto_gem items[]
-execute store result storage ng:tmp lotto.items int 1 run scoreboard players remove #lotto_count ng 1
-function ng:lotto_itempool with storage ng:tmp lotto
+#execute store result score #lotto_count ng if data storage ng:lotto_gem items[]
+#execute store result storage ng:tmp lotto.items int 1 run scoreboard players remove #lotto_count ng 1
+#function ng:lotto_itempool with storage ng:tmp lotto
+
+
+execute store result score $max random if data storage ng:lotto_gem items[]
+scoreboard players remove $max random 1
+scoreboard players set $min random 0
+function ng:random_uniform
+execute store result storage ng:tmp lotto.index int 1 run scoreboard players get $out random
 function ng:lotto_copyitem with storage ng:tmp lotto
 
 execute if data storage ng:tmp mainhand.tag.Enchantments[0] run data modify storage ng:tmp mainhand.tag.display.Lore append value '""'

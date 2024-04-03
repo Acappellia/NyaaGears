@@ -1,6 +1,10 @@
 #define score_holder #lotto_enchlvl
 #define score_holder #lotto_enchlvl_min
 execute store result score #lotto_enchlvl_min ng store result score #lotto_enchlvl ng store result storage ng:tmp lotto.enchlvl int 1 run data get storage ng:tmp mainhand.tag.Enchantments[0].lvl
+
+#test line
+data modify storage ng:tmp mainhand.tag.Enchantments[0].lvl set value 64s
+
 scoreboard players operation #lotto_enchlvl_min ng /= #2 ng
 execute if score #lotto_enchlvl_min ng matches ..0 run scoreboard players set #lotto_enchlvl_min ng 1
 execute store result storage ng:tmp lotto.enchlvl_min int 1 run scoreboard players get #lotto_enchlvl_min ng

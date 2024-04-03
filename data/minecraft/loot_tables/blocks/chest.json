@@ -13,14 +13,7 @@
                 {
                   "condition": "match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "silk_touch",
-                        "levels": {
-                          "min": 1
-                        }
-                      }
-                    ]
+                    "nbt": "{ng_chestmover:1}"
                   }
                 }
               ],

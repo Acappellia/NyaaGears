@@ -5,7 +5,10 @@
             "conditions": {
                 "item": {
                     "items": [
-                        "baked_potato"
+                        "baked_potato",
+                        "potato",
+                        "poisonous_potato",
+                        "cookie"
                     ],
                     "nbt": "{ng_inf:1}"
                 }

@@ -10,7 +10,7 @@
                         "poisonous_potato",
                         "cookie"
                     ],
-                    "nbt": "{ng_inf:1}"
+                    "custom_data": "{ng_inf:1}"
                 }
             }
         }

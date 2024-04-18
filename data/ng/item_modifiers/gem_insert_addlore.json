@@ -1,0 +1,29 @@
+{
+    "function": "set_lore",
+    "lore": [
+        [
+            {
+                "text": "+ ",
+                "color": "#66ffcc",
+                "italic": false
+            }, 
+            {
+                "text": "[ ",
+                "color": "gray",
+                "italic": false
+            },
+            {
+                "nbt": "mainhand.components.\"minecraft:custom_name\"",
+                "storage": "ng:tmp",
+                "interpret": true
+            },
+            {
+                "text": " ]",
+                "color": "gray",
+                "italic": false
+            }
+        ]
+    ],
+    "entity": "this",
+    "mode": "append"
+}

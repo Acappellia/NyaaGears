@@ -1,4 +1,19 @@
-# NyaaGems 祝福系统 v1.6
+# NyaaGears 自定义物品系统 v2.0
+
+正在迁移至 1.20.5 并扩展功能
+
+== UNDER HEAVY CONSTRUCTION ==
+
+## 物品标签
+
+- `ng_gem` 祝福宝石
+- `ng_gem_upg` 祝福幻晶
+- `ng_inf` 无限的烤土豆
+- `ng_head` 大苹果
+- `ng_ticket` 抽奖券
+- `ng_item` 物品祝福与幻晶计数
+- `ng_wishes` 物品祝福
+- `ng_slots` 物品祝福栏位
 
 ## 更新说明
 

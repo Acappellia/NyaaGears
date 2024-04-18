@@ -19,7 +19,7 @@
                         "predicate": {
                             "equipment": {
                                 "mainhand": {
-                                    "nbt": "{ng_gem_upg:1}"
+                                    "custom_data": "{ng_gem_upg:1}"
                                 }
                             }
                         }

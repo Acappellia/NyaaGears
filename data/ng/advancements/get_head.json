@@ -7,7 +7,7 @@
                     "items": [
                         "apple"
                     ],
-                    "nbt": "{ng_head:1}"
+                    "custom_data": "{ng_head:1}"
                 }
             }
         }

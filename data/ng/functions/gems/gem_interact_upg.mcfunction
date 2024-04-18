@@ -27,7 +27,6 @@ execute if data storage ng:tmp mainhand.tag.Enchantments_store[0] run function n
 
 data modify storage ng:tmp offhand.tag.Unbreakable set from storage ng:tmp mainhand.tag.Unbreakable
 
-
 tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "green"},{"text": "] ","color": "white"},{"text": "祝福强化成功","color": "white"}]
 
 execute if score #gem_upgrades ng matches 1 run data modify storage ng:tmp offhand.tag.display.Lore append value '[{"text": "-< ","color": "gray","italic": false},{"text": "★ ☆ ☆","color": "#ffcccc","italic": false},{"text": " >-","color": "gray","italic": false}]'

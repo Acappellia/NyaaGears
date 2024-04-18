@@ -8,7 +8,7 @@
                     "nbt": "{Tags:[\"ng_lotto\"]}"
                 },
                 "item": {
-                    "nbt": "{ng_ticket:1}"
+                    "custom_data": "{ng_ticket:1}"
                 }
             }
         }

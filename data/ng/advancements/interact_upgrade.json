@@ -29,6 +29,6 @@
         }
     },
     "rewards": {
-        "function": "ng:gem_interact_upg"
+        "function": "ng:player/gem_interact_legacy"
     }
 }

@@ -1,6 +1,3 @@
-advancement revoke @s only ng:interact
-
-#stopsound @s * block.note_block.imitate.ender_dragon
 playsound ui.button.click block @s ~ ~ ~ 1 1
 
 ##copy data

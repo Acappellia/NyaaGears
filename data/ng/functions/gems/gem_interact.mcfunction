@@ -35,10 +35,14 @@ execute if score #occu_slots ng matches 1.. if score #total_slots ng <= #occu_sl
 item modify entity @s weapon.mainhand ng:remove_1
 item modify entity @s weapon.offhand ng:remove_1
 
-##update item - TODO
-#execute if data storage ng:tmp mainhand.tag.StoredAttributeModifiers[0] run function ng:add_attribute_loop
-#execute if data storage ng:tmp mainhand.tag.Enchantments_store[0] run function ng:add_ench_loop
-#data modify storage ng:tmp offhand.tag.Unbreakable set from storage ng:tmp mainhand.tag.Unbreakable
+##update legacy item
+execute unless data storage ng:tmp mainhand.components."minecraft:custom_data".ng_newgem run function ng:gems/gem_update_legacy
+
+##update item
+execute if data storage ng:tmp mainhand.components."minecraft:custom_data".attribute_modifiers[0] run function ng:gems/add_attribute_loop
+execute if data storage ng:tmp mainhand.components."minecraft:custom_data".enchantments run function ng:gems/add_ench
+data modify storage ng:tmp offhand.components."minecraft:unbreakable" set from storage ng:tmp mainhand.components."minecraft:unbreakable"
+execute if data storage ng:tmp offhand.components."minecraft:unbreakable" run data modify storage ng:tmp offhand.components."minecraft:unbreakable".show_in_tooltip set value true
 
 ##add slot info for 1st wish
 execute if score #total_slots ng matches ..0 run function ng:gems/add_slot_first

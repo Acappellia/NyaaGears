@@ -8,7 +8,7 @@
                 "italic": false
             }, 
             {
-                "text": "[ ",
+                "text": "[",
                 "color": "gray",
                 "italic": false
             },
@@ -18,7 +18,7 @@
                 "interpret": true
             },
             {
-                "text": " ]",
+                "text": "]",
                 "color": "gray",
                 "italic": false
             }

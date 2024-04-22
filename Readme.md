@@ -8,6 +8,8 @@
 
 - `ng_gem` 祝福宝石
 - `ng_gem_upg` 祝福幻晶
+- `ng_newgem` 新版祝福和幻晶
+- `ng_gem_slot` 开槽宝石
 - `ng_inf` 无限的烤土豆
 - `ng_head` 大苹果
 - `ng_ticket` 抽奖券

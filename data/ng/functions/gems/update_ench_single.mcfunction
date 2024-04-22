@@ -1,0 +1,1 @@
+$data modify storage ng:tmp mainhand.components."minecraft:custom_data".enchantments."$(ench_id)" set from storage ng:tmp mainhand.components."minecraft:custom_data".Enchantments_store[0].lvl

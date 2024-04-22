@@ -1,0 +1,4 @@
+data remove storage ng:tmp enchlore
+data modify storage ng:tmp enchlore.id set value "fire_protection"
+data modify storage ng:tmp enchlore.lvl set from storage ng:tmp mainhand.components."minecraft:custom_data".enchantments."minecraft:fire_protection"
+function ng:gems/enchs_addlore/addlore with storage ng:tmp enchlore

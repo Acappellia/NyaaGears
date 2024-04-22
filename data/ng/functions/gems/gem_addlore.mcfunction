@@ -14,7 +14,7 @@ execute if data storage ng:tmp mainhand.components."minecraft:unbreakable" run d
 ##add additional lore & name
 execute unless data storage ng:tmp mainhand.components."minecraft:custom_name" run data modify storage ng:tmp mainhand.components."minecraft:custom_name" set value '[{"text": "生机之祝福","color": "#ffccaa","italic": false}]'
 data modify storage ng:tmp mainhand.components."minecraft:lore" append value '""'
-data modify storage ng:tmp mainhand.components."minecraft:lore" append value '[{"text": "手持祝福点击","color": "gray","italic": false},{"text": "龙首下的音符盒","color": "white","italic": false},{"text": "或","color": "gray","italic": false},{"text": "祝福圣台","color": "white","italic": false}]'
+data modify storage ng:tmp mainhand.components."minecraft:lore" append value '[{"text": "手持祝福点击","color": "gray","italic": false},{"text": "祝福圣台","color": "white","italic": false}]'
 data modify storage ng:tmp mainhand.components."minecraft:lore" append value '[{"text": "可以将祝福","color": "gray","italic": false},{"text": "永久镶嵌","color": "white","italic": false},{"text": "在副手物品","color": "gray","italic": false}]'
 data modify storage ng:tmp mainhand.components."minecraft:lore" append value '[{"text": "祝福带有的附魔将按照原版叠加","color": "dark_gray","italic": false}]'
 data modify storage ng:tmp mainhand.components."minecraft:lore" append value '[{"text": "属性值将代替物品默认属性或额外叠加至物品","color": "dark_gray","italic": false}]'

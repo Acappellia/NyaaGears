@@ -16,7 +16,7 @@ execute if data storage ng:tmp mainhand.components."minecraft:unbreakable" run d
 
 execute unless data storage ng:tmp mainhand.components."minecraft:custom_name" run data modify storage ng:tmp mainhand.components."minecraft:custom_name" set value '[{"text": "祝福幻晶","color": "#ffccaa","italic": false}]'
 data modify storage ng:tmp mainhand.components."minecraft:lore" append value '""'
-data modify storage ng:tmp mainhand.components."minecraft:lore" append value '[{"text": "手持幻晶点击","color": "gray","italic": false},{"text": "龙首下的音符盒","color": "white","italic": false},{"text": "或","color": "gray","italic": false},{"text": "祝福圣台","color": "white","italic": false}]'
+data modify storage ng:tmp mainhand.components."minecraft:lore" append value '[{"text": "手持幻晶点击","color": "gray","italic": false},{"text": "祝福圣台","color": "white","italic": false}]'
 data modify storage ng:tmp mainhand.components."minecraft:lore" append value '[{"text": "能够为","color": "gray","italic": false},{"text": "带有祝福的","color": "white","italic": false},{"text": "副手物品额外强化至多三次","color": "gray","italic": false}]'
 data modify storage ng:tmp mainhand.components."minecraft:lore" append value '[{"text": "幻晶的附魔和属性将直接叠加至物品","color": "dark_gray","italic": false}]'
 execute unless data storage ng:tmp mainhand.components."minecraft:custom_data".lore_origin run data remove storage ng:tmp mainhand.components."minecraft:lore"[0]

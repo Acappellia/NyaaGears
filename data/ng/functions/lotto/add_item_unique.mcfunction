@@ -1,0 +1,2 @@
+$data modify storage ng:lottos types[$(type)].unique.item set from storage ng:tmp mainhand
+$execute store result storage ng:lottos types[$(type)].unique.chance int 1 run scoreboard players get #input_lotto_uniquechance ng

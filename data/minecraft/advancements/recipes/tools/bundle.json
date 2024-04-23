@@ -5,9 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": [
-              "minecraft:string"
-            ]
+            "items": "minecraft:string"
           }
         ]
       },
@@ -30,6 +28,5 @@
     "recipes": [
       "minecraft:bundle"
     ]
-  },
-  "sends_telemetry_event": false
+  }
 }

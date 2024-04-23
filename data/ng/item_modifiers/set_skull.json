@@ -10,14 +10,14 @@
                 "amount": 2,
                 "attribute": "generic.armor_toughness",
                 "slot": "head",
-                "operation": "addition",
+                "operation": "add_value",
                 "name": "luck"
             },
             {
                 "amount": 4,
                 "attribute": "generic.armor",
                 "slot": "head",
-                "operation": "addition",
+                "operation": "add_value",
                 "name": "luck"
             }
         ]

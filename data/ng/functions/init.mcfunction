@@ -2,15 +2,22 @@
 #define storage ng:lotto_gem
 #define storage ng:lotto_gem_upg
 #define storage ng:logs
+#define storage ng:lottos
 
 scoreboard objectives add ng dummy
 scoreboard players set #-1 ng -1
 scoreboard players set #2 ng 2
+scoreboard players set #3 ng 3
 
 scoreboard objectives add ng_killcd dummy
 scoreboard objectives add ng_killcd_time dummy
 
 scoreboard objectives add ng_test dummy
+
+scoreboard objectives add ng_lottocd dummy
+scoreboard objectives add ng_lottocd_reset custom:time_since_death
+scoreboard objectives add ng_lottocount dummy
+scoreboard objectives add ng_lottotype dummy
 
 forceload add 0 0 0 0 
 
@@ -44,3 +51,5 @@ scoreboard players set #65536 random 65536
 scoreboard players set #lcg_a random 1630111353
 scoreboard players set #lcg_c random 1623164762
 scoreboard players set #lcg_m random 2147483647
+
+schedule function ng:3gt_tick 3t replace

@@ -1,0 +1,1 @@
+data modify storage ng:tmp mainhand.components."minecraft:lore" set from storage ng:tmp mainhand.components."minecraft:custom_data".lore_origin

@@ -1,0 +1,1 @@
+$data modify storage ng:lottos types[$(type)].common append from storage ng:tmp mainhand

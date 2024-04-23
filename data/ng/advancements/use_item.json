@@ -1,18 +1,18 @@
 {
     "criteria": {
-        "eat_apple":{
-            "trigger": "consume_item",
+        "use": {
+            "trigger": "using_item",
             "conditions": {
                 "item": {
                     "items": [
-                        "apple"
+                        "enchanted_book"
                     ],
-                    "custom_data": "{ng_head:1}"
+                    "custom_data": "{ng_ticket:1}"
                 }
             }
         }
     },
     "rewards": {
-        "function": "ng:others/get_skull"
+        "function": "ng:player/using_lotto"
     }
 }

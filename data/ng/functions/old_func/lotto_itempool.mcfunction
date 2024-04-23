@@ -1,1 +1,0 @@
-$execute store result storage ng:tmp lotto.index int 1 run random value 0..$(items) minecraft:entities/bat

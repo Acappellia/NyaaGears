@@ -8,7 +8,8 @@
                         "baked_potato",
                         "potato",
                         "poisonous_potato",
-                        "cookie"
+                        "cookie",
+                        "raw_iron"
                     ],
                     "custom_data": "{ng_inf:1}"
                 }
@@ -16,6 +17,6 @@
         }
     },
     "rewards": {
-        "function": "ng:inf_potato"
+        "function": "ng:others/inf_potato"
     }
 }

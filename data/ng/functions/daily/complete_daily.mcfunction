@@ -1,5 +1,5 @@
 give @s emerald 5
-tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": " 获得了完成表格的奖励！","color": "#66ffcc"}]
+tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": " 获得了完成集物表的奖励！","color": "#66ffcc"}]
 playsound item.goat_horn.sound.1 player @s ~ ~ ~ 1 1.2
 particle end_rod ~ ~1 ~ 1 1 1 0.01 20
 particle wax_on ~ ~1 ~ 1 1 1 0 20

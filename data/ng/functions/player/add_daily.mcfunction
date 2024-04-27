@@ -1,5 +1,5 @@
 advancement revoke @s only ng:add_daily
-tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": " 已增加每日收集表数量","color": "#66ffcc"}]
+tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": " 已增加每日集物表数量","color": "#66ffcc"}]
 playsound block.amethyst_block.resonate player @s ~ ~ ~ 1 1
 
 ##add count

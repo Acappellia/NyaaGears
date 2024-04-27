@@ -23,4 +23,4 @@ function ng:daily/gen_daily/gen_9 with storage ng:tmp gen_daily
 
 $data modify storage ng:player players[$(p_id)].daily set from storage ng:tmp daily
 
-tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": " 收集表已更新！","color": "#44ff88"}]
+tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": " 集物表已更新！","color": "#44ff88"}]

@@ -3,6 +3,10 @@ advancement revoke @s only ng:use_item
 scoreboard players remove @s ng_lottocd 1
 scoreboard players reset @s ng_lottocd_reset 
 
+execute if score @s ng_lottocd matches -1 run summon area_effect_cloud ~ ~0.5 ~ {Particle:{type:"end_rod"},Radius:3f,RadiusPerTick:-0.5f,RadiusOnUse:0f,Duration:40}
+execute if score @s ng_lottocd matches -1 run effect give @s darkness 3 0 true
+#execute if score @s ng_lottocd matches -20 run effect give @s blindness 1 0 true
+
 execute if score @s ng_lottocd matches -1 run playsound item.brush.brushing.sand player @a ~ ~ ~ 0.5 1.5
 execute if score @s ng_lottocd matches -7 run playsound item.brush.brushing.sand player @a ~ ~ ~ 0.5 1.6
 execute if score @s ng_lottocd matches -20 run playsound item.brush.brushing.sand player @a ~ ~ ~ 0.5 1.9
@@ -34,4 +38,5 @@ execute if score @s ng_lottocd matches -26 anchored eyes positioned ^ ^-0.2 ^0.5
 #execute if score @s ng_lottocd matches -37 run playsound block.note_block.snare player @a ~ ~ ~ 0.1 1.6
 #execute if score @s ng_lottocd matches -39 run playsound block.note_block.snare player @a ~ ~ ~ 0.1 1.65
 
+#execute if score @s ng_lottocd matches -40 run effect clear @s darkness
 execute if score @s ng_lottocd matches ..-40 run function ng:lotto/check_ticket

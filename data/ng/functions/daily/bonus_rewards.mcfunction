@@ -1,2 +1,2 @@
 give @s diamond 1
-tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": " 已累计完成 ","color": "#66ffcc"},{"score":{"name": "@s","objective": "ng_daily_streak"},"color": "white"},{"text": " 张表格，获得了额外的奖励！","color": "#66ffcc"}]
+tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": " 已累计完成 ","color": "#66ffcc"},{"score":{"name": "@s","objective": "ng_daily_streak"},"color": "white"},{"text": " 张集物表，获得了额外的奖励！","color": "#66ffcc"}]

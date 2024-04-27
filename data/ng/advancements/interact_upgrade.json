@@ -19,7 +19,9 @@
                         "predicate": {
                             "equipment": {
                                 "mainhand": {
-                                    "custom_data": "{ng_gem_upg:1}"
+                                    "predicates": {
+                                        "custom_data": "{ng_gem_upg:1}"
+                                    }
                                 }
                             }
                         }

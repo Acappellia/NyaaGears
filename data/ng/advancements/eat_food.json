@@ -11,7 +11,10 @@
                         "cookie",
                         "raw_iron"
                     ],
-                    "custom_data": "{ng_inf:1}"
+                    "predicates": {
+                        "custom_data": "{ng_inf:1}"
+                    }
+                }
                 }
             }
         }

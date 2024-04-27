@@ -4,15 +4,15 @@
             "trigger": "consume_item",
             "conditions": {
                 "item": {
-                    "items": "minecraft:apple",
+                    "items": "paper",
                     "predicates": {
-                        "custom_data": "{ng_head:1}"
+                        "custom_data": "{ng_daily_add:1}"
                     }
                 }
             }
         }
     },
     "rewards": {
-        "function": "ng:others/get_skull"
+        "function": "ng:player/add_daily"
     }
 }

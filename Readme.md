@@ -1,7 +1,9 @@
-# NyaaGears 自定义物品系统 v2.0
+# NyaaGears 自定义物品系统 v2.1
 
 ## 更新说明
 
+- v2.1 每日任务更新
+    - 增加了类似bingo的每日收集任务
 - v2.0 迁移&更新
     - 为应对ojng对物品component作出的修改，将数据包重写并重命名
     - 扩展了祝福的镶嵌，现在支持物品更多的祝福栏位
@@ -31,7 +33,9 @@
     - 用于创建自定义奖池，玩家通过特殊标签的物品使用抽奖
     - 奖池可以添加任何物品，其中祝福被添加至奖池后会为其添加属性值浮动
 - 任务系统
-    - TBD
+    - 每日会刷新一张3x3的bingo表格，完成后能获取每日的奖励
+    - 如果当日没有完成，第二天表格会刷新，但表格的完成次数会积攒，至多积攒至七次
+    - 增加了任务刷新券和跳过券
 - 部分自定义合成
     - TBD
 
@@ -66,10 +70,10 @@
     - 如果未设置奖池的独特奖励，则独特奖励不会出现
     - 同样可以修改 `#input_lotto_type` 在计分项 `ng` 的值可以指定奖池编号。
 - 手动执行指令操作
-    - `/function ng:player/insert_gem` 镶嵌祝福
-    - `/function ng:player/insert_gem_upgrade` 使用幻晶强化
-    - `/function ng:player/open_slot` 打开新的槽位
-    - `/function ng:player/open_slot_first` 打开第一个槽位（用于获取带有空槽位的物品）
+    - `/function ng:player_data/insert_gem` 镶嵌祝福
+    - `/function ng:player_data/insert_gem_upgrade` 使用幻晶强化
+    - `/function ng:player_data/open_slot` 打开新的槽位
+    - `/function ng:player_data/open_slot_first` 打开第一个槽位（用于获取带有空槽位的物品）
     - 获取抽奖物品的模板（奖池#0）`/give @s enchanted_book[minecraft:max_stack_size=10,minecraft:food={saturation:0.0f,nutrition:0,can_always_eat:1b,eat_seconds:12.0f},minecraft:enchantment_glint_override=0b,minecraft:custom_data={ng_lotto_type:0,ng_ticket:1}]`
 
 ## 物品标签
@@ -85,3 +89,5 @@
 - `ng_item` 物品祝福与幻晶计数
 - `ng_wishes` 物品祝福
 - `ng_slots` 物品祝福栏位
+- `ng_daily_skip` 跳过每日任务
+- `ng_daily_add` 增加每日任务

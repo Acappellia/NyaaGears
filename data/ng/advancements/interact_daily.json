@@ -1,0 +1,16 @@
+{
+    "criteria": {
+        "interact": {
+            "trigger": "player_interacted_with_entity",
+            "conditions": {
+                "entity": {
+                    "type": "interaction",
+                    "nbt": "{Tags:[\"ng_daily_npc\"]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "ng:player/open_daily"
+    }
+}

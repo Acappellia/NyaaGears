@@ -1,5 +1,5 @@
 execute if score @s ng_lottocount matches 1 run playsound entity.ender_eye.death player @a ~ ~ ~ 1 0.8
-execute unless score @s ng_lottocount matches 1 run playsound entity.ender_eye.launch player @a ~ ~ ~ 1 0.8
+execute unless score @s ng_lottocount matches 1 run playsound entity.armadillo.brush player @a ~ ~ ~ 1 1.2
 
 scoreboard players remove @s ng_lottocount 1
 

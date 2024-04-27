@@ -1,0 +1,13 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "give_adv": {
+            "trigger": "minecraft:location"
+        }
+    },
+    "rewards": {
+        "recipes": [
+            "ng:test"
+        ]
+    }
+}

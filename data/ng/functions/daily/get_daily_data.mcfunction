@@ -1,0 +1,1 @@
+$data modify storage ng:tmp p_daily set from storage ng:player players[$(p_id)].daily

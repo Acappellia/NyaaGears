@@ -7,7 +7,9 @@
                     "items": [
                         "enchanted_book"
                     ],
-                    "custom_data": "{ng_ticket:1}"
+                    "predicates": {
+                        "custom_data": "{ng_ticket:1}"
+                    }
                 }
             }
         }

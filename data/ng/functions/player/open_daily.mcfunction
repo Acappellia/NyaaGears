@@ -17,6 +17,6 @@ function ng:daily/get_daily_data with storage ng:tmp p_info
 execute store result storage ng:tmp p_daily.p_streak int 1 run scoreboard players get @s ng_daily_streak
 execute store result storage ng:tmp p_daily.p_remain int 1 run scoreboard players get @s ng_daily_remain
 
-tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": " 已打开每日收集","color": "#66ffcc"}]
+tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": " 已打开每日集物","color": "#66ffcc"}]
 execute unless score @s ng_daily_remain matches 1.. run function ng:daily/show_daily_allcomplete with storage ng:tmp p_daily
 execute if score @s ng_daily_remain matches 1.. run function ng:daily/show_daily with storage ng:tmp p_daily

@@ -15,6 +15,9 @@ execute unless data storage ng:tmp mainhand.components."minecraft:custom_data".n
 execute unless data storage ng:tmp offhand.count run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "请将 任意待镶嵌物品 放置在主手","color": "gray"}]
 execute unless data storage ng:tmp offhand.count run return -1
 
+execute if data storage ng:tmp offhand.components."minecraft:custom_data".nw_fur_id run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "滚犊子吧 ","color": "#dd66dd"},{"text": "\"你整的啥物品啊\"","color": "gold"},{"text": ";","color": "yellow"}]
+execute if data storage ng:tmp offhand.components."minecraft:custom_data".nw_fur_id run return -1
+
 ##check avalibility
 #define score_holder #total_slots
 #define score_holder #occu_slots

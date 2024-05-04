@@ -8,6 +8,6 @@ execute if score #lotto_isunique ng matches 1.. run return 1
 $execute store result score $max random if data storage ng:lottos types[$(type)].common[]
 scoreboard players remove $max random 1
 scoreboard players set $min random 0
-function ng:random_uniform
+function nc:random_uniform
 execute store result storage ng:tmp lotto_info.index int 1 run scoreboard players get $out random
 function ng:lotto/copy_data with storage ng:tmp lotto_info

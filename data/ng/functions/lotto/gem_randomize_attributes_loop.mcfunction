@@ -6,7 +6,7 @@ execute if score #att_amount ng matches 100..999 store result score $min random 
 execute if score #att_amount ng matches 1000.. store result score $min random store result score $max random run data get storage ng:tmp attribute_modifiers_random[0].amount 1
 
 scoreboard players operation $min random /= #2 ng
-function ng:random_uniform
+function nc:random_uniform
 execute if score #att_amount ng matches 0..9 store result storage ng:tmp attribute_modifiers_random[0].amount double 0.001 run scoreboard players get $out random
 execute if score #att_amount ng matches 10..99 store result storage ng:tmp attribute_modifiers_random[0].amount double 0.01 run scoreboard players get $out random
 execute if score #att_amount ng matches 100..999 store result storage ng:tmp attribute_modifiers_random[0].amount double 0.1 run scoreboard players get $out random

@@ -21,6 +21,6 @@ function ng:daily/gen_daily/gen_8 with storage ng:tmp gen_daily
 execute store result storage ng:tmp gen_daily.index int 1 run random value 0..354
 function ng:daily/gen_daily/gen_9 with storage ng:tmp gen_daily
 
-$data modify storage ng:player players[$(p_id)].daily set from storage ng:tmp daily
+$data modify storage nc:player players[$(p_id)].daily set from storage ng:tmp daily
 
 tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": " 集物表已更新！","color": "#44ff88"}]

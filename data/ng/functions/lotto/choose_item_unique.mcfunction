@@ -4,7 +4,7 @@ $execute store result score #unique_chance ng run data get storage ng:lottos typ
 execute unless score #unique_chance ng matches 1.. run scoreboard players set #unique_chance ng 10
 scoreboard players set $max random 10000
 scoreboard players set $min random 1
-function ng:random_uniform
+function nc:random_uniform
 execute unless score $out random <= #unique_chance ng run return 1
 
 ##copy item

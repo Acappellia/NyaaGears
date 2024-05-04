@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "ng:init"
+        "ng:init",
+        "nc:init"
     ]
 }

@@ -1,7 +1,6 @@
 ##init player
 
 #define score_holder #search_result
-tellraw @a "check"
 
 ##check if player changed
 data remove storage nc:tmp search
@@ -24,3 +23,5 @@ setblock 0 -64 0 bedrock
 ##init data
 data modify storage nc:player players append value {}
 data modify storage nc:player players[-1].playerid set from storage nc:player uuid_check[0].playerid
+data modify storage nc:player players[-1].name set from storage nc:player uuid_check[0].name
+data modify storage nc:player players[-1].UUID set from storage nc:player uuid_check[0].UUID

@@ -4,14 +4,15 @@ playsound ui.button.click block @s ~ ~ ~ 1 1
 data remove storage ng:tmp mainhand
 data remove storage ng:tmp offhand
 
-data modify storage ng:tmp mainhand set from entity @s SelectedItem
-data modify storage ng:tmp offhand set from entity @s Inventory[{Slot:-106b}]
+##CHANGED HANDS!
+data modify storage ng:tmp offhand set from entity @s SelectedItem
+data modify storage ng:tmp mainhand set from entity @s Inventory[{Slot:-106b}]
 
 ##check hand
-execute unless data storage ng:tmp mainhand.components."minecraft:custom_data".ng_gem run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "请将祝福放置在主手","color": "gray"}]
+execute unless data storage ng:tmp mainhand.components."minecraft:custom_data".ng_gem run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "请将 任意祝福 放置在副手","color": "gray"}]
 execute unless data storage ng:tmp mainhand.components."minecraft:custom_data".ng_gem run return -1
 
-execute unless data storage ng:tmp offhand.count run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "请将需要被镶嵌祝福的物品放置在副手","color": "gray"}]
+execute unless data storage ng:tmp offhand.count run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "请将 任意待镶嵌物品 放置在主手","color": "gray"}]
 execute unless data storage ng:tmp offhand.count run return -1
 
 ##check avalibility

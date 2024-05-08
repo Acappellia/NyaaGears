@@ -1,20 +1,3 @@
-playsound ui.button.click block @s ~ ~ ~ 1 1
-
-##copy data
-data remove storage ng:tmp mainhand
-data remove storage ng:tmp offhand
-
-##SWAPPED HANDS!!!!!!!
-data modify storage ng:tmp offhand set from entity @s SelectedItem
-data modify storage ng:tmp mainhand set from entity @s Inventory[{Slot:-106b}]
-
-##check hand
-execute unless data storage ng:tmp mainhand.components."minecraft:custom_data".ng_gem_slot run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "请将 未尽之诗 放置在副手","color": "gray"}]
-execute unless data storage ng:tmp mainhand.components."minecraft:custom_data".ng_gem_slot run return -1
-
-execute unless data storage ng:tmp offhand.count run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "请将 待打开栏位的物品 放置在主手","color": "gray"}]
-execute unless data storage ng:tmp offhand.count run return -1
-
 ##check avalibility
 scoreboard players set #total_slots ng 0
 scoreboard players set #occu_slots ng 0

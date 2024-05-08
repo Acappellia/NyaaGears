@@ -1,4 +1,4 @@
-give @s emerald 5
+function nc:shulker_give {type:"daily"}
 tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": " 获得了完成集物表的奖励！","color": "#66ffcc"}]
 playsound item.goat_horn.sound.1 player @s ~ ~ ~ 1 1.2
 particle end_rod ~ ~1 ~ 1 1 1 0.01 20

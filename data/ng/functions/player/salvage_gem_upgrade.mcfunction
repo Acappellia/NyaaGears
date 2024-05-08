@@ -1,2 +1,2 @@
 item modify entity @s weapon.mainhand ng:remove_1
-give @s emerald
+function nc:shulker_give {type:"salvage_gem_upgrade"}

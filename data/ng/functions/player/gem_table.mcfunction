@@ -12,6 +12,12 @@ data modify storage ng:tmp mainhand set from entity @s Inventory[{Slot:-106b}]
 execute if data storage ng:tmp offhand.components."minecraft:custom_data".nw_fur_id run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "滚犊子吧 ","color": "#dd66dd"},{"text": "\"你整的啥物品啊\"","color": "gold"},{"text": ";","color": "yellow"}]
 execute if data storage ng:tmp offhand.components."minecraft:custom_data".nw_fur_id run return -1
 
+execute if data storage ng:tmp offhand.components."minecraft:minecraft:writable_book_content" run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "滚犊子吧 ","color": "#dd66dd"},{"text": "\"你整的啥物品啊\"","color": "gold"},{"text": ";","color": "yellow"}]
+execute if data storage ng:tmp offhand.components."minecraft:minecraft:writable_book_content" run return -1
+
+execute if data storage ng:tmp offhand.components."minecraft:minecraft:written_book_content" run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "滚犊子吧 ","color": "#dd66dd"},{"text": "\"你整的啥物品啊\"","color": "gold"},{"text": ";","color": "yellow"}]
+execute if data storage ng:tmp offhand.components."minecraft:minecraft:written_book_content" run return -1
+
 execute if data storage ng:tmp offhand.components."minecraft:custom_data".ng_gem run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "滚犊子吧 ","color": "#dd66dd"},{"text": "\"你整的啥物品啊\"","color": "gold"},{"text": ";","color": "yellow"}]
 execute if data storage ng:tmp offhand.components."minecraft:custom_data".ng_gem run return -1
 

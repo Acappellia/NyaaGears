@@ -1,7 +1,7 @@
 data modify storage ng:tmp mainhand.components."minecraft:custom_data".attribute_modifiers append value {}
 data modify storage ng:tmp mainhand.components."minecraft:custom_data".attribute_modifiers[-1].name set from storage ng:tmp mainhand.components."minecraft:custom_data".StoredAttributeModifiers[0].Name
 data modify storage ng:tmp mainhand.components."minecraft:custom_data".attribute_modifiers[-1].type set from storage ng:tmp mainhand.components."minecraft:custom_data".StoredAttributeModifiers[0].AttributeName
-data modify storage ng:tmp mainhand.components."minecraft:custom_data".attribute_modifiers[-1].uuid set from storage ng:tmp mainhand.components."minecraft:custom_data".StoredAttributeModifiers[0].UUID
+data modify storage ng:tmp mainhand.components."minecraft:custom_data".attribute_modifiers[-1].id set string storage ng:tmp mainhand.components."minecraft:custom_data".StoredAttributeModifiers[0].UUID 0
 data modify storage ng:tmp mainhand.components."minecraft:custom_data".attribute_modifiers[-1].amount set from storage ng:tmp mainhand.components."minecraft:custom_data".StoredAttributeModifiers[0].Amount
 data modify storage ng:tmp mainhand.components."minecraft:custom_data".attribute_modifiers[-1].slot set from storage ng:tmp mainhand.components."minecraft:custom_data".StoredAttributeModifiers[0].Slot
 

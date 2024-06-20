@@ -1,5 +1,9 @@
 playsound item.book.page_turn block @s ~ ~ ~ 1 1.5
 
+##close feature
+tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "该功能目前暂未开放","color": "gray"},{"text": "","color": "white"}]
+return -1
+
 ##copy data
 data remove storage ng:tmp mainhand
 data remove storage ng:tmp offhand

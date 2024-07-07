@@ -9,8 +9,8 @@ execute unless data storage ng:tmp mainhand.components."minecraft:custom_data".n
 execute unless data storage ng:tmp mainhand.components."minecraft:custom_data".ng_gem unless data storage ng:tmp mainhand.components."minecraft:custom_data".ng_gem_upg run return -1
 
 ##check hand
-execute if data storage ng:tmp mainhand.components."minecraft:custom_data".ng_gem if data storage ng:tmp offhand.count run function ng:player/salvage_gem
-execute if data storage ng:tmp mainhand.components."minecraft:custom_data".ng_gem_upg if data storage ng:tmp offhand.count run function ng:player/salvage_gem_upgrade
+execute if data storage ng:tmp mainhand.components."minecraft:custom_data".ng_gem run function ng:player/salvage_gem
+execute if data storage ng:tmp mainhand.components."minecraft:custom_data".ng_gem_upg run function ng:player/salvage_gem_upgrade
 
 ##effect
 particle ash ~ ~ ~ 0.4 0.4 0.4 0 10

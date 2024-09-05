@@ -25,5 +25,9 @@ execute if data storage ng:tmp mainhand.components."minecraft:custom_data".ng_ge
 ##add to lotto
 function ng:lotto/add_item with storage ng:tmp add_lotto
 
+data remove storage ng:tmp itemname
+data modify storage ng:tmp itemname set from storage ng:tmp mainhand.components."minecraft:item_name"
+data modify storage ng:tmp itemname set from storage ng:tmp mainhand.components."minecraft:custom_name"
+
 ##tellraw
-tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "gold"},{"text": "] ","color": "white"},{"text": "已加入奖池 #","color": "white"},{"score":{"name": "#input_lotto_type","objective": "ng"}},{"text": " - ","color": "white"},{"storage": "ng:tmp","nbt":"mainhand.components.\"minecraft:custom_name\"","interpret": true}]
+tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "gold"},{"text": "] ","color": "white"},{"text": "已加入奖池 #","color": "white"},{"score":{"name": "#input_lotto_type","objective": "ng"}},{"text": " - ","color": "white"},{"storage": "ng:tmp","nbt":"itemname","interpret": true}]

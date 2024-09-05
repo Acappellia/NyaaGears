@@ -75,7 +75,7 @@
     - `/function ng:player/gem_table` 使用幻晶工作台
     - `/function ng:player/salvage_table` 使用幻晶分解台
     - `/function ng:player/open_slot_first` 打开第一个槽位（用于获取带有空槽位的物品）
-    - 获取抽奖物品的模板（奖池#0）`/give @s enchanted_book[minecraft:max_stack_size=10,minecraft:food={saturation:0.0f,nutrition:0,can_always_eat:1b,eat_seconds:12.0f},minecraft:enchantment_glint_override=0b,minecraft:custom_data={ng_lotto_type:0,ng_ticket:1}]`
+    - 获取抽奖物品的模板（奖池#0）`/give @s enchanted_book[max_stack_size=10,food={saturation:0.0f,nutrition:0,can_always_eat:1b,eat_seconds:12.0f},enchantment_glint_override=0b,custom_data={ng_lotto_type:0,ng_ticket:1}]`
 - 部分物品定义：手持对应的物品后输入`/data modify storage <location> set from entity @s SelectedItem`，不同奖励的位置如下
     - 每日奖励 `nc:items daily`
     - 每日累计奖励 `nc:items daily_streak`

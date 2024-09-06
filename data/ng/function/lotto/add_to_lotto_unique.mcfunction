@@ -32,4 +32,5 @@ data modify storage ng:tmp itemname set from storage ng:tmp mainhand.components.
 data modify storage ng:tmp itemname set from storage ng:tmp mainhand.components."minecraft:custom_name"
 
 ##tellraw
-tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "gold"},{"text": "] ","color": "white"},{"text": "已将奖池 #","color": "white"},{"score":{"name": "#input_lotto_type","objective": "ng"}},{"text": " 的独特物品设置为 ","color": "white"},{"storage": "ng:tmp","nbt":"itemname","interpret": true}]
+execute if data storage ng:tmp itemname run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "gold"},{"text": "] ","color": "white"},{"text": "已将奖池 #","color": "white"},{"score":{"name": "#input_lotto_type","objective": "ng"}},{"text": " 的独特物品设置为 ","color": "white"},{"storage": "ng:tmp","nbt":"itemname","interpret": true}]
+execute unless data storage ng:tmp itemname run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGem","color": "gold"},{"text": "] ","color": "white"},{"text": "已将奖池 #","color": "white"},{"score":{"name": "#input_lotto_type","objective": "ng"}},{"text": " 的独特物品设置为 ","color": "white"},{"storage": "ng:tmp","nbt":"mainhand.id"}]

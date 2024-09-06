@@ -30,13 +30,13 @@ execute if score #gem_upgrades ng matches 3 run data modify storage ng:tmp offha
 execute store result storage ng:tmp offhand.components."minecraft:custom_data".ng_item int 1 run scoreboard players add #gem_upgrades ng 1
 
 ##give
-forceload add 0 0
-setblock 0 -64 0 bedrock
-setblock 0 -64 0 shulker_box{Items:[{Slot:0b,count:1,id:"minecraft:stone"}]}
-data modify block 0 -64 0 Items[0].id set from storage ng:tmp offhand.id
-data modify block 0 -64 0 Items[0].components set from storage ng:tmp offhand.components
-loot spawn ~ ~1 ~ mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
-setblock 0 -64 0 bedrock
+forceload add 100 100
+setblock 1600 0 1600 bedrock
+setblock 1600 0 1600 shulker_box{Items:[{Slot:0b,count:1,id:"minecraft:stone"}]}
+data modify block 1600 0 1600 Items[0].id set from storage ng:tmp offhand.id
+data modify block 1600 0 1600 Items[0].components set from storage ng:tmp offhand.components
+loot spawn ~ ~1 ~ mine 1600 0 1600 stone[minecraft:custom_data={drop_contents:1}]
+setblock 1600 0 1600 bedrock
 
 ##display
 tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "祝福强化成功","color": "white"}]

@@ -9,13 +9,13 @@ execute store result storage ng:tmp lotto_info.type int 1 run scoreboard players
 function ng:lotto/choose_item with storage ng:tmp lotto_info
 
 ##give item
-forceload add 0 0
-setblock 0 -64 0 bedrock
-setblock 0 -64 0 shulker_box{Items:[{Slot:0b,count:1,id:"minecraft:stone"}]}
-data modify block 0 -64 0 Items[0].id set from storage ng:tmp mainhand.id
-data modify block 0 -64 0 Items[0].components set from storage ng:tmp mainhand.components
-execute anchored eyes positioned ^ ^-0.3 ^0.5 run loot spawn ~ ~ ~ mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
-setblock 0 -64 0 bedrock
+forceload add 100 100
+setblock 1600 0 1600 bedrock
+setblock 1600 0 1600 shulker_box{Items:[{Slot:0b,count:1,id:"minecraft:stone"}]}
+data modify block 1600 0 1600 Items[0].id set from storage ng:tmp mainhand.id
+data modify block 1600 0 1600 Items[0].components set from storage ng:tmp mainhand.components
+execute anchored eyes positioned ^ ^-0.3 ^0.5 run loot spawn ~ ~ ~ mine 1600 0 1600 stone[minecraft:custom_data={drop_contents:1}]
+setblock 1600 0 1600 bedrock
 
 ##normal
 data remove storage ng:tmp itemname

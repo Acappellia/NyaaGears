@@ -21,13 +21,13 @@ data modify storage ng:tmp mainhand.components."minecraft:custom_data".ng_newgem
 function ng:gems/gem_addlore
 
 ##give item
-forceload add 0 0
-setblock 0 -64 0 bedrock
-setblock 0 -64 0 shulker_box{Items:[{Slot:0b,count:1,id:"minecraft:stone"}]}
-data modify block 0 -64 0 Items[0].id set from storage ng:tmp mainhand.id
-data modify block 0 -64 0 Items[0].components set from storage ng:tmp mainhand.components
-loot spawn ~ ~1 ~ mine 0 -64 0 stone[minecraft:custom_data={drop_contents:1}]
-setblock 0 -64 0 bedrock
+forceload add 100 100
+setblock 1600 0 1600 bedrock
+setblock 1600 0 1600 shulker_box{Items:[{Slot:0b,count:1,id:"minecraft:stone"}]}
+data modify block 1600 0 1600 Items[0].id set from storage ng:tmp mainhand.id
+data modify block 1600 0 1600 Items[0].components set from storage ng:tmp mainhand.components
+loot spawn ~ ~1 ~ mine 1600 0 1600 stone[minecraft:custom_data={drop_contents:1}]
+setblock 1600 0 1600 bedrock
 
 ##info
 tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "gold"},{"text": "] ","color": "white"},{"text": "已创建 — ","color": "white"},{"storage": "ng:tmp","nbt":"mainhand.components.\"minecraft:custom_name\"","interpret": true}]

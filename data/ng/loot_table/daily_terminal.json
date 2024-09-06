@@ -1,0 +1,68 @@
+{
+    "type": "generic",
+    "pools": [
+        {
+            "rolls": 1.0,
+            "entries": [
+                {
+                    "type": "item",
+                    "name": "end_crystal",
+                    "functions": [
+                        {
+                            "function": "set_name",
+                            "name": [
+                                {
+                                    "text": "每日集物终端",
+                                    "color": "#83fcc6",
+                                    "italic": false
+                                }
+                            ]
+                        },
+                        {
+                            "function": "set_lore",
+                            "mode": "replace_all",
+                            "lore": [
+                                [
+                                    {
+                                        "text": "足不出户就能访问每日集物的便携式终端",
+                                        "color": "white",
+                                        "italic": false
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": ""
+                                    }
+                                ],
+                                [
+                                    {
+                                        "text": "Powered by NyaaCloud™️",
+                                        "color": "gray",
+                                        "italic": true
+                                    }
+                                ]
+                            ]
+                        },
+                        {
+                            "function": "set_custom_data",
+                            "tag": {
+                                "ng_daily_terminal": 1
+                            }
+                        },
+                        {
+                            "function": "set_components",
+                            "components": {
+                                "food": {
+                                    "nutrition": 0,
+                                    "saturation": 0,
+                                    "can_always_eat": true,
+                                    "eat_seconds": 10000000
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

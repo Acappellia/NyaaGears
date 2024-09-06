@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "use": {
+            "trigger": "using_item",
+            "conditions": {
+                "item": {
+                    "items": [
+                        "end_crystal"
+                    ],
+                    "predicates": {
+                        "custom_data": "{ng_daily_terminal:1b}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "ng:player/open_daily"
+    }
+}

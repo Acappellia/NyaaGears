@@ -1,7 +1,13 @@
 advancement revoke @s only ng:interact_daily
+advancement revoke @s only ng:use_terminal
+
+execute if score @s ng_opendaily_cd matches ..0 run return -1
+scoreboard players set @s ng_opendaily_cd -40
 
 scoreboard players enable @s trigger_daily
-playsound entity.cat.ambient player @s ~ ~ ~ 1 1
+
+execute if entity @e[type=interaction,tag=ng_daily_npc,distance=..7] run playsound entity.cat.ambient player @s ~ ~ ~ 1 1
+execute unless entity @e[type=interaction,tag=ng_daily_npc,distance=..7] run playsound block.beacon.power_select player @s ~ ~ ~ 1 1.3
 
 ##store playerid
 data remove storage ng:tmp p_info

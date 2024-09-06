@@ -20,6 +20,8 @@ scoreboard objectives add ng_daily_streak dummy
 scoreboard objectives add ng_daily_remain dummy
 scoreboard objectives add ng_daily_id dummy
 
+scoreboard objectives add ng_opendaily_cd custom:time_since_death
+
 execute unless score #daily_counter ng_daily_id = #daily_counter ng_daily_id run scoreboard players set #daily_counter ng_daily_id 1
 
 scoreboard objectives add trigger_daily trigger

@@ -1,10 +1,11 @@
 scoreboard players reset @s trigger_daily
 scoreboard players enable @s trigger_daily
 
-execute unless entity @e[type=interaction,tag=ng_daily_npc,distance=..7] run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": " 离太远了没办法提交物品啦 >_<","color": "gray"}]
-execute unless entity @e[type=interaction,tag=ng_daily_npc,distance=..7] run return -1
+#execute unless entity @e[type=interaction,tag=ng_daily_npc,distance=..7] run tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": " 离太远了没办法提交物品啦 >_<","color": "gray"}]
+#execute unless entity @e[type=interaction,tag=ng_daily_npc,distance=..7] run return -1
 
-playsound entity.cat.ambient player @s ~ ~ ~ 1 1
+execute if entity @e[type=interaction,tag=ng_daily_npc,distance=..7] run playsound entity.cat.ambient player @s ~ ~ ~ 1 1
+execute unless entity @e[type=interaction,tag=ng_daily_npc,distance=..7] run playsound block.beacon.power_select player @s ~ ~ ~ 1 1.3
 
 ##check complete
 execute if score @s ng_daily_remain matches ..0 run return -1

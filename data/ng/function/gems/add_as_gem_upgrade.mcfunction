@@ -21,6 +21,7 @@ data modify storage ng:tmp mainhand.components."minecraft:custom_data".ng_newgem
 function ng:gems/gem_addlore_upg
 
 ##give item
+forceload add 0 0
 setblock 0 -64 0 bedrock
 setblock 0 -64 0 shulker_box{Items:[{Slot:0b,count:1,id:"minecraft:stone"}]}
 data modify block 0 -64 0 Items[0].id set from storage ng:tmp mainhand.id

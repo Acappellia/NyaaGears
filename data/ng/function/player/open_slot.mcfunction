@@ -26,6 +26,7 @@ execute if score #occu_slots ng matches 1.. run data modify storage ng:tmp offha
 execute if score #occu_slots ng matches ..0 run data modify storage ng:tmp offhand.components."minecraft:lore" insert -1 value '[{"text": "+ ","color": "gray","italic": false},{"text": "空的祝福栏位","color": "#aaffcc","italic": true}]'
 
 ##give item
+forceload add 0 0
 setblock 0 -64 0 bedrock
 setblock 0 -64 0 shulker_box{Items:[{Slot:0b,count:1,id:"minecraft:stone"}]}
 data modify block 0 -64 0 Items[0].id set from storage ng:tmp offhand.id

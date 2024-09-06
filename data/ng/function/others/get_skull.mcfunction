@@ -2,6 +2,7 @@ advancement revoke @s only ng:get_head
 
 playsound entity.item_frame.remove_item player @a ~ ~ ~ 1 1
 
+forceload add 0 0
 setblock 0 -64 0 bedrock
 setblock 0 -64 0 shulker_box
 item replace block 0 -64 0 container.0 with player_head 1

@@ -38,6 +38,7 @@ item modify entity @s weapon.offhand ng:remove_1
 function ng:gems/add_slot_first
 
 ##give item
+forceload add 0 0
 setblock 0 -64 0 bedrock
 setblock 0 -64 0 shulker_box{Items:[{Slot:0b,count:1,id:"minecraft:stone"}]}
 data modify block 0 -64 0 Items[0].id set from storage ng:tmp offhand.id

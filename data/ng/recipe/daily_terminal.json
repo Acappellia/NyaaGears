@@ -1,10 +1,10 @@
 {
     "type": "crafting_shaped",
     "key": {
-        "#": {
+        "$": {
             "item": "end_crystal"
         },
-        "$": {
+        "#": {
             "item": "redstone"
         }
     },

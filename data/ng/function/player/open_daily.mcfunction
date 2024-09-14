@@ -1,5 +1,6 @@
 advancement revoke @s only ng:interact_daily
 advancement revoke @s only ng:use_terminal
+recipe give @s ng:daily_terminal
 
 execute if score @s ng_opendaily_cd matches ..0 run return -1
 scoreboard players set @s ng_opendaily_cd -40

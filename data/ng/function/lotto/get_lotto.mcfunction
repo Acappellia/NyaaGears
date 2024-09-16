@@ -13,6 +13,7 @@ forceload add 1600 1600
 setblock 1600 0 1600 bedrock
 setblock 1600 0 1600 shulker_box{Items:[{Slot:0b,count:1,id:"minecraft:stone"}]}
 data modify block 1600 0 1600 Items[0].id set from storage ng:tmp mainhand.id
+data modify block 1600 0 1600 Items[0].count set from storage ng:tmp mainhand.count
 data modify block 1600 0 1600 Items[0].components set from storage ng:tmp mainhand.components
 execute anchored eyes positioned ^ ^-0.3 ^0.5 run loot spawn ~ ~ ~ mine 1600 0 1600 stone[minecraft:custom_data={drop_contents:1}]
 setblock 1600 0 1600 bedrock

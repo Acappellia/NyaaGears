@@ -1,4 +1,4 @@
-$clear @s $(item_6)[!minecraft:custom_name] $(count_6)
+$clear @s $(item_6)[!minecraft:custom_name,!minecraft:custom_data] $(count_6)
 $data modify storage nc:player players[$(p_id)].daily.complete_6 set value 1
 $data modify storage nc:player players[$(p_id)].daily.item_6 set value "minecraft:lime_stained_glass_pane"
 $data modify storage nc:player players[$(p_id)].daily.count_6 set value 1

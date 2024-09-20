@@ -2,7 +2,7 @@
 #define score_holder #daily_reqcount
 scoreboard players reset #daily_checkcount ng
 scoreboard players reset #daily_reqcount ng
-$execute store result score #daily_checkcount ng run clear @s $(item_3)[!minecraft:custom_name] 0
+$execute store result score #daily_checkcount ng run clear @s $(item_3)[!minecraft:custom_name,!minecraft:custom_data] 0
 execute unless score #daily_checkcount ng matches 1.. run return -1
 
 execute store result score #daily_reqcount ng run data get storage ng:tmp p_daily.count_3

@@ -1,7 +1,7 @@
 playsound item.book.page_turn block @s ~ ~ ~ 1 1.5
 
 ##close feature
-tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "该功能目前暂未开放","color": "gray"},{"text": "","color": "white"}]
+tellraw @s [{"text": "[","color": "white"},{"text": "NyaaGears","color": "green"},{"text": "] ","color": "white"},{"text": "该功能目前不开放，并且以后也不会开放","color": "gray"},{"text": "","color": "white"}]
 return -1
 
 ##copy data

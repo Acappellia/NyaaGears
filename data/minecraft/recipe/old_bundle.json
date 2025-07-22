@@ -3,12 +3,8 @@
   "category": "equipment",
   "show_notification": true,
   "key": {
-    "#": {
-      "item": "minecraft:rabbit_hide"
-    },
-    "-": {
-      "item": "minecraft:string"
-    }
+    "#": "minecraft:rabbit_hide",
+    "-": "minecraft:string"
   },
   "pattern": [
     "-#-",

@@ -3,7 +3,7 @@ advancement revoke @s only ng:use_item
 scoreboard players remove @s ng_lottocd 1
 scoreboard players reset @s ng_lottocd_reset
 
-execute if score @s ng_lottocd matches -1 run summon area_effect_cloud ~ ~0.5 ~ {Particle:{type:"end_rod"},Radius:3f,RadiusPerTick:-0.5f,RadiusOnUse:0f,Duration:40}
+execute if score @s ng_lottocd matches -1 run summon area_effect_cloud ~ ~0.5 ~ {custom_particle:{type:"end_rod"},Radius:3f,RadiusPerTick:-0.5f,RadiusOnUse:0f,Duration:40}
 execute if score @s ng_lottocd matches -1 run effect give @s darkness 3 0 true
 #execute if score @s ng_lottocd matches -20 run effect give @s blindness 1 0 true
 

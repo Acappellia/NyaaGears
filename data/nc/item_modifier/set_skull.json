@@ -8,14 +8,14 @@
         "modifiers": [
             {
                 "amount": 2,
-                "attribute": "generic.armor_toughness",
+                "attribute": "armor_toughness",
                 "slot": "head",
                 "operation": "add_value",
                 "id": "nc:skull_player1"
             },
             {
                 "amount": 4,
-                "attribute": "generic.armor",
+                "attribute": "armor",
                 "slot": "head",
                 "operation": "add_value",
                 "id": "nc:skull_player2"

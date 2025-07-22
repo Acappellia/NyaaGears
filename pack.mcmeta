@@ -1,13 +1,13 @@
 {
     "pack": {
-        "pack_format": 48,
+        "pack_format": 81,
         "description": [
             {
                 "text": "Gear System by nano\n",
                 "color": "#a8e64c"
             },
             {
-                "text": "MC 1.21",
+                "text": "MC 1.21.8",
                 "color": "#909090"
             }
         ]

@@ -34,7 +34,7 @@ execute store result storage ng:tmp gem_insert.slot_index int 1 run scoreboard p
 function ng:gems/insert_gem_lore with storage ng:tmp gem_insert
 
 ##update info
-execute unless data storage ng:tmp offhand.components."minecraft:custom_data".ng_item run data modify storage ng:tmp offhand.components."minecraft:lore" append value '[{"text": "< ","color": "gray","italic": false},{"text": "☆ ☆ ☆","color": "white","italic": false},{"text": " >","color": "gray","italic": false}]'
+execute unless data storage ng:tmp offhand.components."minecraft:custom_data".ng_item run data modify storage ng:tmp offhand.components."minecraft:lore" append value [{"text": "< ","color": "gray","italic": false},{"text": "☆ ☆ ☆","color": "white","italic": false},{"text": " >","color": "gray","italic": false}]
 execute unless data storage ng:tmp offhand.components."minecraft:custom_data".ng_item run data modify storage ng:tmp offhand.components."minecraft:custom_data".ng_item set value 1
 execute store result storage ng:tmp offhand.components."minecraft:custom_data".ng_wishes int 1 run scoreboard players add #occu_slots ng 1
 

@@ -19,12 +19,12 @@ data modify storage ng:tmp offhand.components."minecraft:unbreakable" set from s
 execute if data storage ng:tmp offhand.components."minecraft:unbreakable" run data modify storage ng:tmp offhand.components."minecraft:unbreakable".show_in_tooltip set value true
 
 ##change lore
-execute if score #gem_upgrades ng matches 1 unless data storage ng:tmp offhand.components."minecraft:custom_data".ng_wishes run data modify storage ng:tmp offhand.components."minecraft:lore" append value '""'
+execute if score #gem_upgrades ng matches 1 unless data storage ng:tmp offhand.components."minecraft:custom_data".ng_wishes run data modify storage ng:tmp offhand.components."minecraft:lore" append value ""
 data remove storage ng:tmp offhand.components."minecraft:lore"[-1]
 
-execute if score #gem_upgrades ng matches 1 run data modify storage ng:tmp offhand.components."minecraft:lore" append value '[{"text": "< ","color": "gray","italic": false},{"text": "★ ☆ ☆","color": "#ffcccc","italic": false},{"text": " >","color": "gray","italic": false}]'
-execute if score #gem_upgrades ng matches 2 run data modify storage ng:tmp offhand.components."minecraft:lore" append value '[{"text": "< ","color": "gray","italic": false},{"text": "★ ★ ☆","color": "#ffaacc","italic": false},{"text": " >","color": "gray","italic": false}]'
-execute if score #gem_upgrades ng matches 3 run data modify storage ng:tmp offhand.components."minecraft:lore" append value '[{"text": "< ","color": "gray","italic": false},{"text": "★ ★ ★","color": "#ff88cc","italic": false},{"text": " >","color": "gray","italic": false}]'
+execute if score #gem_upgrades ng matches 1 run data modify storage ng:tmp offhand.components."minecraft:lore" append value [{"text": "< ","color": "gray","italic": false},{"text": "★ ☆ ☆","color": "#ffcccc","italic": false},{"text": " >","color": "gray","italic": false}]
+execute if score #gem_upgrades ng matches 2 run data modify storage ng:tmp offhand.components."minecraft:lore" append value [{"text": "< ","color": "gray","italic": false},{"text": "★ ★ ☆","color": "#ffaacc","italic": false},{"text": " >","color": "gray","italic": false}]
+execute if score #gem_upgrades ng matches 3 run data modify storage ng:tmp offhand.components."minecraft:lore" append value [{"text": "< ","color": "gray","italic": false},{"text": "★ ★ ★","color": "#ff88cc","italic": false},{"text": " >","color": "gray","italic": false}]
 
 ##update info
 execute store result storage ng:tmp offhand.components."minecraft:custom_data".ng_item int 1 run scoreboard players add #gem_upgrades ng 1

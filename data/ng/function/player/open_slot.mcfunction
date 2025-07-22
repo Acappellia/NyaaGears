@@ -22,8 +22,8 @@ execute store result score #lore_count ng if data storage ng:tmp offhand.compone
 execute if score #occu_slots ng matches 1.. store result storage ng:tmp offhand.components."minecraft:custom_data".ng_slots[-1].lore_index int 1 run scoreboard players remove #lore_count ng 1
 execute if score #occu_slots ng matches ..0 store result storage ng:tmp offhand.components."minecraft:custom_data".ng_slots[-1].lore_index int 1 run scoreboard players get #lore_count ng
 
-execute if score #occu_slots ng matches 1.. run data modify storage ng:tmp offhand.components."minecraft:lore" insert -2 value '[{"text": "+ ","color": "gray","italic": false},{"text": "空的祝福栏位","color": "#aaffcc","italic": true}]'
-execute if score #occu_slots ng matches ..0 run data modify storage ng:tmp offhand.components."minecraft:lore" insert -1 value '[{"text": "+ ","color": "gray","italic": false},{"text": "空的祝福栏位","color": "#aaffcc","italic": true}]'
+execute if score #occu_slots ng matches 1.. run data modify storage ng:tmp offhand.components."minecraft:lore" insert -2 value [{"text": "+ ","color": "gray","italic": false},{"text": "空的祝福栏位","color": "#aaffcc","italic": true}]
+execute if score #occu_slots ng matches ..0 run data modify storage ng:tmp offhand.components."minecraft:lore" insert -1 value [{"text": "+ ","color": "gray","italic": false},{"text": "空的祝福栏位","color": "#aaffcc","italic": true}]
 
 ##give item
 forceload add 1600 1600

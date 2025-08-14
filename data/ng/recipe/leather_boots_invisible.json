@@ -1,0 +1,23 @@
+{
+    "type": "smithing_transform",
+    "template": "netherite_ingot",
+    "base": "leather_boots",
+    "result": {
+        "id": "leather_boots",
+        "components": {
+            "equippable": {
+                "slot": "feet",
+                "asset_id": "minecraft:empty"
+            },
+            "item_name": [
+                {
+                    "translate": "ng.invisible",
+                    "fallback": "隐形"
+                },
+                {
+                    "translate": "item.minecraft.leather_boots"
+                }
+            ]
+        }
+    }
+}

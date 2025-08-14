@@ -1,0 +1,23 @@
+{
+    "type": "smithing_transform",
+    "template": "netherite_ingot",
+    "base": "chainmail_leggings",
+    "result": {
+        "id": "chainmail_leggings",
+        "components": {
+            "equippable": {
+                "slot": "legs",
+                "asset_id": "minecraft:empty"
+            },
+            "item_name": [
+                {
+                    "translate": "ng.invisible",
+                    "fallback": "隐形"
+                },
+                {
+                    "translate": "item.minecraft.chainmail_leggings"
+                }
+            ]
+        }
+    }
+}

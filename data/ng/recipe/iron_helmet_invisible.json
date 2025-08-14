@@ -1,0 +1,23 @@
+{
+    "type": "smithing_transform",
+    "template": "netherite_ingot",
+    "base": "iron_helmet",
+    "result": {
+        "id": "iron_helmet",
+        "components": {
+            "equippable": {
+                "slot": "head",
+                "asset_id": "minecraft:empty"
+            },
+            "item_name": [
+                {
+                    "translate": "ng.invisible",
+                    "fallback": "隐形"
+                },
+                {
+                    "translate": "item.minecraft.iron_helmet"
+                }
+            ]
+        }
+    }
+}

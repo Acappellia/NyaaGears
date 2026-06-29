@@ -1,7 +1,11 @@
+##count lottos
 execute if score @s ng_lottocount matches 1 run playsound entity.ender_eye.death player @a ~ ~ ~ 1 0.8
 execute unless score @s ng_lottocount matches 1 run playsound entity.armadillo.brush player @a ~ ~ ~ 1 1.2
 
 scoreboard players remove @s ng_lottocount 1
+
+##check special types
+execute if score @s ng_lottotype matches -99 run return run function ng:others/get_random_enchanted_book
 
 ##copy lotto data
 data remove storage ng:tmp lotto_info
